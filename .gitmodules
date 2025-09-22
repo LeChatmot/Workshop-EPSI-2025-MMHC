@@ -1,0 +1,3 @@
+[submodule "chitchatter"]
+	path = chitchatter
+	url = https://github.com/jeremyckahn/chitchatter.git
