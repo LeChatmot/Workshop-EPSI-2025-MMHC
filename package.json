@@ -52,7 +52,7 @@
     "webrtc-adapter": "^8.2.4"
   },
   "scripts": {
-    "start": "cross-env VITE_HOMEPAGE=$(npm pkg get homepage) vite --port 3000",
+    "start": "vite --port 3000",
     "start:tracker": "bittorrent-tracker",
     "start:streamsaver": "serve -p 3015 node_modules/streamsaver",
     "start:api": "VERCEL_TOKEN=\"$(jq .token ~/.local/share/com.vercel.cli/auth.json)\" npx vercel dev --token=\"$VERCEL_TOKEN\" --listen=127.0.0.1:3001 --yes",
