@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "user1",
+      "secret": "secret"
+    },
+    {
+      "id": 2,
+      "name": "oui oui",
+      "secret": "O4MD4BT7DULU6GB2",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "oui",
+      "secret": "BNNSEJTZOYDSY4K4",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "name": "jerome",
+      "secret": "EYEHWJR2FVTH2ADY",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "name": "jerome_test",
+      "secret": "JF3T6ELJB4WBWYBC",
+      "role": "admin"
+    },
+    {
+      "id": 6,
+      "name": "ouais",
+      "secret": "HN3QWNQGC46HK62A",
+      "role": "user"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "tache1",
+      "group_id": "uuid-admin",
+      "completed": false
+    }
+  ],
+  "groups": [
+    {
+      "uuid": "uuid-admin",
+      "name": "Admins"
+    }
+  ]
+}

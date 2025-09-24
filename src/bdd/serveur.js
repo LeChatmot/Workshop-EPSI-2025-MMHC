@@ -1,7 +1,7 @@
 import fs from "fs";
 import { randomUUID } from "crypto";
 
-const DB_FILE = "./src/bdd/db.json";
+const DB_FILE = "./db.json";
 
 // UUID constant pour les tests
 const ADMIN_UUID = "uuid-admin";
