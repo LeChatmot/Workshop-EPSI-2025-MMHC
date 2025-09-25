@@ -1,16 +1,8 @@
 const currentUser = { username: "lionknight", role: "admin" };
-
 const usernameInputApp = document.getElementById("username");
-
 const roleSelectApp = document.getElementById("role");
 const addUserBtn = document.getElementById("addUserBtn");
-
 const message = document.getElementById("message");
-const affQrCode = document.getElementById("affQrCode");
-
-affQrCode.addEventListener("click", () => {
-  window.location.href = "./affQrCode.html";
-});
 
 // Ajouter un utilisateur
 addUserBtn.addEventListener("click", async () => {
@@ -33,11 +25,16 @@ addUserBtn.addEventListener("click", async () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: newUsername, role: newRole })
     });
-
-    alert(`✅ Utilisateur "${newUsername}" ajouté avec succès !`);
-    window.location.href = "./affQrCode.html";
-
   } catch (err) {
     message.textContent = `Erreur réseau : ${err.message}`;
   }
+});
+
+affQrCode.addEventListener("click", () => {
+  if (usernameInputApp.value.trim() !== "" && roleSelectApp.value.trim() !== "") {
+    currentUser.username = usernameInputApp.value.trim();
+    currentUser.role = roleSelectApp.value.trim();
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  }
+  window.location.href = "./affQrCode.html";
 });

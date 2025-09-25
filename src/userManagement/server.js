@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 // Rendre le dossier QrCodes public
-app.use("/qrcodes", express.static(path.join(__dirname, "QrCodes")));
+app.use("/qrcodes", express.static(path.join(__dirname, "qrcodes")));
 app.use("/", express.static(path.join(__dirname, "/")));
 
 

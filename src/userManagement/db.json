@@ -2,38 +2,9 @@
   "users": [
     {
       "id": 1,
-      "name": "user1",
-      "secret": "secret"
-    },
-    {
-      "id": 4,
-      "name": "jerome",
-      "secret": "FVVVMBJ6JQYTA4T6",
-      "role": "admin"
-    },
-    {
-      "id": 5,
-      "name": "lionknight",
-      "secret": "G5YCCWJBKMGHQKJI",
-      "role": "admin"
-    },
-    {
-      "id": 6,
-      "name": "Test",
-      "secret": "PFZB2WIQEFDQ4JAP",
+      "name": "ouais ouais ouais",
+      "secret": "FR3CQ32VAJGTIRCJ",
       "role": "user"
-    },
-    {
-      "id": 7,
-      "name": "bondour, ça va?",
-      "secret": "BQXTAOYELQ6XI3IN",
-      "role": "user"
-    },
-    {
-      "id": 8,
-      "name": "bonjour",
-      "secret": "L57FQMCNA5IBSNTW",
-      "role": "admin"
     }
   ],
   "tasks": [
