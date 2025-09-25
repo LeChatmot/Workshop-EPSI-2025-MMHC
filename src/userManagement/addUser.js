@@ -1,4 +1,4 @@
-const currentUser = { username: "lionknight", role: "admin" };
+let currentUser = JSON.parse(localStorage.getItem("currentUser")) || { username: "", role: "" };
 const usernameInputApp = document.getElementById("username");
 const roleSelectApp = document.getElementById("role");
 const addUserBtn = document.getElementById("addUserBtn");
