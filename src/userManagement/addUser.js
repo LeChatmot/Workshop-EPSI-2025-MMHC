@@ -1,4 +1,4 @@
-let currentUser = JSON.parse(localStorage.getItem("currentUser")) || { username: "", role: "" };
+let currentUser = { "username": "lionknight", "role": "admin" };
 const usernameInputApp = document.getElementById("username");
 const roleSelectApp = document.getElementById("role");
 const addUserBtn = document.getElementById("addUserBtn");
@@ -15,7 +15,7 @@ addUserBtn.addEventListener("click", async () => {
   const newRole = roleSelectApp.value;
 
   if (!newUsername) {
-    message.textContent = "Veuillez entrer un nom d'utilisateur.";
+    message.textContent = currentUser.username+"Veuillez entrer un nom d'utilisateur.";
     return;
   }
 
