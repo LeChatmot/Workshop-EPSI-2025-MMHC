@@ -1,13 +1,26 @@
 import express from "express";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
 import { addUser } from "./userManager.js";
 import { verifyUser } from "./verifyUser.js";
 
+// Correction pour __dirname en ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 
 app.use(cors());
-app.use(express.json()); // Pour parser le JSON des requêtes
+app.use(express.json());
+
+// Rendre le dossier QrCodes public
+app.use("/qrcodes", express.static(path.join(__dirname, "QrCodes")));
+app.use("/", express.static(path.join(__dirname, "/")));
+
 
 // Endpoint pour ajouter un utilisateur
 app.post("/api/users", async (req, res) => {
