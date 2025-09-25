@@ -37,24 +37,6 @@ addUserBtn.addEventListener("click", async () => {
     alert(`✅ Utilisateur "${newUsername}" ajouté avec succès !`);
     window.location.href = "./affQrCode.html";
 
-    // if (res.status === 200) {
-    //   alert(`✅ Utilisateur "${newUsername}" ajouté avec succès !`);
-    //   usernameInput.value = "";
-    //   roleSelect.value = "user";
-    // };
-    // const data = await res.json();
-
-    // if (data.error) {
-    //   message.textContent = `❌ ${data.error}`;
-
-
-    // } else {
-    //   message.textContent = `✅ Utilisateur "${data.user.name}" ajouté avec succès !`;
-    //   usernameInput.value = "";
-    //   roleSelect.value = "user";
-
-
-    // }
   } catch (err) {
     message.textContent = `Erreur réseau : ${err.message}`;
   }

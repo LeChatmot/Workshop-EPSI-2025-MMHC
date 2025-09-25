@@ -1,27 +1,21 @@
-const generateBtn = document.getElementById("generateBtn");
 const qrCodeImg = document.getElementById("qrCode");
-const usernameInput = document.getElementById("username");
 const message = document.getElementById("message");
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-generateBtn.addEventListener("click", () => {
-    const username = usernameInput.value.trim();
-    if (!username) {
-        alert("Veuillez entrer un nom d'utilisateur.");
-        return;
-    }
-    qrCodeImg.src = `../../qrcodes/${username}-qrcode.png`;
-    qrCodeImg.alt = `QR Code pour ${username}`;
+document.addEventListener("DOMContentLoaded", () => {
+    qrCodeImg.src = `../../qrcodes/${currentUser.username}-qrcode.png`;
+    alert("Image QR code générée !");
+    qrCodeImg.alt = `QR Code pour ${userToUse}`;
     qrCodeImg.style.display = "block";
 
-    // l'image n'existe pas => on attrape l'erreur
+    // gérer l'erreur si l'image n'existe pas
     qrCodeImg.onerror = () => {
         message.textContent = "❌ QR code non trouvé. Assurez-vous que l'utilisateur existe.";
         qrCodeImg.style.display = "none";
     };
-
 });
 
-// Générer le QR code au chargement si un nom d'utilisateur est déjà présent
-if (usernameInput.value.trim()) {
+// Générer le QR code au chargement si currentUser existe et input vide
+if (currentUser && !usernameInput.value.trim()) {
     generateBtn.click();
 }
