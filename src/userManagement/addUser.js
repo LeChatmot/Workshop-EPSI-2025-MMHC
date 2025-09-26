@@ -11,11 +11,11 @@ addUserBtn.addEventListener("click", async () => {
     return;
   }
 
-  const newUsername = usernameInputApp.value.trim();
+  const newUsername = usernameInputApp.value.trim(); //suprime espaces inutiles début et fin
   const newRole = roleSelectApp.value;
 
   if (!newUsername) {
-    message.textContent = currentUser.username+"Veuillez entrer un nom d'utilisateur.";
+    message.textContent = "Veuillez entrer un nom d'utilisateur.";
     return;
   }
 
