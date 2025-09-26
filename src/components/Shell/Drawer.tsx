@@ -21,6 +21,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import ReportIcon from '@mui/icons-material/Report'
 import GitInfo from 'react-git-info/macro'
+import ViewKanbanIcon from '@mui/icons-material/ViewKanban'
 
 import { routes } from 'config/routes'
 import { SettingsContext } from 'contexts/SettingsContext'
@@ -87,6 +88,14 @@ export const Drawer = ({ isDrawerOpen, onDrawerClose }: DrawerProps) => {
                 <Home />
               </ListItemIcon>
               <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to={routes.KANBAN}>
+              <ListItemIcon>
+                <ViewKanbanIcon  />
+              </ListItemIcon>
+              <ListItemText primary="Kanban" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
