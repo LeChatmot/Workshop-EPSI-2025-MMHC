@@ -33,7 +33,6 @@ import { PublicRoom } from 'pages/PublicRoom'
 import { Settings } from 'pages/Settings'
 import { serialization, SerializedUserSettings } from 'services/Serialization'
 import { routerType } from 'config/router'
-import { KanbanPage } from 'pages/Kanban/KanbanPage'
 
 export interface BootstrapProps {
   persistedStorage?: typeof localforage
@@ -258,7 +257,6 @@ const Bootstrap = ({
                       element={<Home userId={userId} />}
                     />
                   ))}
-                  <Route path={routes.KANBAN} element={<KanbanPage />}  />
                   <Route path={routes.ABOUT} element={<About />} />
                   <Route path={routes.DISCLAIMER} element={<Disclaimer />} />
                   <Route

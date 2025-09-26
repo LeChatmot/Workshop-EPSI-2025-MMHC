@@ -6,7 +6,6 @@ export enum routes {
   PUBLIC_ROOM = '/public/:roomId',
   ROOT = '/',
   SETTINGS = '/settings',
-  KANBAN = '/kanban',
 }
 
 export const homepageUrl = new URL(
