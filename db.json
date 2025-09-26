@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 5,
+      "name": "jerome_test",
+      "secret": "JF3T6ELJB4WBWYBC",
+      "role": "admin"
+    },
+    {
+      "id": 6,
+      "name": "ouais",
+      "secret": "HN3QWNQGC46HK62A",
+      "role": "user"
+    },
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "tache1",
+      "group_id": "uuid-admin",
+      "completed": false
+    }
+  ],
+  "groups": [
+    {
+      "uuid": "uuid-admin",
+      "name": "Admins"
+    }
+  ]
+}

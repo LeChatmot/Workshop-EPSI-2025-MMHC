@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter un utilisateur</title>
+</head>
+<body>
+  <h1>Ajouter un utilisateur</h1>
+
+  <label for="username">Nom d'utilisateur :</label>
+  <input type="text" id="username" placeholder="Nom d'utilisateur">
+
+  <label for="role">Rôle :</label>
+  <select id="role">
+    <option value="user">Utilisateur</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <button id="addUserBtn">Ajouter</button>
+  <button id="affQrCode">Voir le QR Code d'affiliation</button>
+
+  <p id="message"></p>
+
+  <script type="module" src="addUser.js"></script>
+</body>
+</html>
